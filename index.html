@@ -10,11 +10,32 @@
             text-align: center;
             margin: 50px;
         }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>Welcome to My Git Test Page</h1>
     <p>This is a simple HTML file to test Git commands.</p>
+    
+    <button onclick="flipCoin()">Flip Coin</button>
+    <p id="result"></p>
+
+    <script>
+        function flipCoin() {
+            let outcome = Math.random() < 0.5 ? "Heads" : "Tails";
+            document.getElementById("result").textContent = "Result: " + outcome;
+        }
+    </script>
 </body>
 </html>
 
